@@ -10,3 +10,5 @@
     donde se tomo muchos ejemplos de su código para hacer el drag and drop posible
     
     Por el momento funciona en los navegadores Chrome, Zafari, Mozilla Firefox
+    
+    Se puede ver la demo en: http://khrizenriquez.titanesdelingenio.com/EjemplosBasicos/html5/drapAndDrop/dragDrop.html
