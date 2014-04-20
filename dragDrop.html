@@ -1,0 +1,63 @@
+<!-- 
+    ****************************
+    *   @author khrizenriquez  *
+    *   @name   Drag&Drop      *
+    ****************************
+
+    funciones para las pruebas de drag & drop
+
+    Muchas cosas de este código fue gracias al señor Jesús Conde 
+    ( https://www.youtube.com/watch?v=qRDiwUMOj8w&list=PLEB8E488D1C2D4C9F ) 
+    donde se tomo muchos ejemplos de su código para hacer el drag and drop posible
+    
+    Por el momento funciona en los navegadores Chrome, Zafari, Mozilla Firefox
+-->
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Drag & drop</title>
+        <link rel="stylesheet" href="css/dragDrop.css" />
+    </head>
+    <body class="metro">
+
+        <!-- elemento donde se agregarán los valores de los interéses -->
+        <form>
+            <fieldset>
+                <label>Agrega los interéses</label>
+                <div class="input-control text" style="width: 40%;">
+                    <input id="txtInteres" type="text" value="" placeholder="Agrega los interéses" maxlength="100" />
+                    <button type="button" class="btn-clear"></button>    
+                </div>
+                <button id="btnAgregar" type="button" class="button large primary" onclick="agregandoElementos (document.getElementById( 'txtInteres' ));">
+                    <i class="icon-plus-2"></i>
+                </button>
+            </fieldset>
+        </form>
+        
+        <!-- elemento donde se estarán colocando los interéses agregados del input de arriba -->
+        <div class="divArrastrar">
+            <label>Todos los interéses</label>
+            <div ondragenter="return enter(event);" ondragover="return over(event);" ondrop="return drop(event);" class="divDragDrop" id="divElementos" style="display: inlie-block;"></div>
+        </div>
+        
+        <!-- existirán 2 valores para agregar los intereses, si me gustan o no me gustan -->
+        <!-- elemento de si me gustan -->
+        <div class="divArrastrar">
+            <label>Me gusta</label>
+            <div ondragenter="return enter(event);" ondragover="return over(event);" ondrop="return drop(event);" class="divDragDrop" id="divMeGustan"></div>
+        </div>
+        <!-- elemento de no me gustan -->
+        <div class="divArrastrar">
+            <label>No me gusta</label>
+            <div ondragenter="return enter(event);" ondragover="return over(event);" ondrop="return drop(event);" class="divDragDrop" id="divNoMeGustan"></div>
+        </div>
+        
+        <!-- area de scripts -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+        <script src="externo/js/jquery.widget.min.js"></script>
+        <script src="externo/js/metro.min.js"></script>
+        <script src="js/dragDrop.js"></script>
+    </body>
+</html>
